@@ -1,0 +1,50 @@
+/* Estilos */
+body {
+  background-color: blanchedalmond;
+}
+body div {
+  background-color: burlywood;
+}
+
+/* Mapas */
+.boton-instagram {
+  background-color: violet;
+  border: violet;
+  width: 100px;
+  height: 100px;
+}
+
+.boton-twitter {
+  background-color: lightblue;
+  border: lightblue;
+  width: 100px;
+  height: 100px;
+}
+
+.boton-facebook {
+  background-color: blue;
+  border: blue;
+  width: 100px;
+  height: 100px;
+}
+
+/* Extend */
+.boton, .boton-nuevo {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.boton-nuevo {
+  width: 300px;
+  height: 300px;
+}
+
+/* Mixin */
+.caja1 {
+  width: 400px;
+  height: 200px;
+}
+
+/*# sourceMappingURL=destino.css.map */
