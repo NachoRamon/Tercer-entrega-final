@@ -1,0 +1,19 @@
+/* Animaciones */
+
+.AgrandarCaja{
+    transition: all 3s;
+}
+
+.AgrandarCaja:hover {
+    height: 100px;
+    width: 80%;
+}
+
+.AgrandarImg{
+    transition: all 2s;
+}
+
+.AgrandarImg:hover{
+    height: 150px;
+    width: 150px;
+}

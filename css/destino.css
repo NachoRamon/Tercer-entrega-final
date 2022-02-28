@@ -1,50 +1,268 @@
-/* Estilos */
-body {
-  background-color: blanchedalmond;
+/* Clases */
+.border {
+  border: 1px solid black;
 }
-body div {
-  background-color: burlywood;
+
+.Repre {
+  width: 100px;
+  height: 100px;
+  margin-left: 230px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.BoxMod {
+  margin-top: 50px;
+}
+
+.imag {
+  background-color: #d3d3d3;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  border-top: solid 40px white;
+}
+
+.centrar {
+  text-align: center;
+  justify-content: center;
+}
+
+.fondo {
+  background-color: #d3d3d3;
+}
+
+.titulos, .titulos-secu {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.color {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.color2 {
+  background-color: #d3d3d3;
+}
+
+.letra {
+  font-size: 25px;
+}
+
+/* Extend */
+.titulos-secu {
+  margin-top: 30px;
+}
+
+/* Mixes */
+.caja-1 {
+  width: 500px;
+  height: 200px;
+}
+
+.caja-2 {
+  width: 500px;
+  height: 200px;
+}
+
+/* Animaciones */
+.AgrandarCaja {
+  transition: all 3s;
+}
+
+.AgrandarCaja:hover {
+  height: 100px;
+  width: 80%;
+}
+
+.AgrandarImg {
+  transition: all 2s;
+}
+
+.AgrandarImg:hover {
+  height: 150px;
+  width: 150px;
+}
+
+/* Estilos generales */
+@font-face {
+  font-family: "Ubuntu-regular", sans-serif;
+  src: url("Ubuntu/Ubuntu-Regular.ttf");
+}
+* {
+  margin: 0%;
+}
+
+/* Anidamiento */
+body nav ul li {
+  grid-area: menu;
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+}
+
+body section h2 {
+  text-align: center;
+  color: black;
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+body h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+body section img {
+  grid-area: repre;
+  width: 150px;
+  height: 150px;
+}
+
+body footer div {
+  background-color: #2c2b2b;
+  color: white;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+
+body section p {
+  padding: 60px;
 }
 
 /* Mapas */
-.boton-instagram {
-  background-color: violet;
-  border: violet;
-  width: 100px;
-  height: 100px;
-}
-
 .boton-twitter {
   background-color: lightblue;
   border: lightblue;
-  width: 100px;
-  height: 100px;
+}
+
+.boton-instagram {
+  background-color: violet;
+  border: violet;
 }
 
 .boton-facebook {
   background-color: blue;
   border: blue;
-  width: 100px;
-  height: 100px;
 }
 
-/* Extend */
-.boton, .boton-nuevo {
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  border: 2px solid black;
+/* GRIDS */
+#gridAreasIndex {
+  display: grid;
+  /* grid por areas */
+  grid-template-areas: "menu " "nosotros " "repre" "productos" "atajos" "lugar " "pie ";
+  /* Dimensiones */
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 0;
 }
 
-.boton-nuevo {
-  width: 300px;
-  height: 300px;
-}
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px) {
+  body {
+    height: 100vh;
+  }
 
-/* Mixin */
-.caja1 {
-  width: 400px;
-  height: 200px;
+  body nav ul li {
+    grid-area: menu;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  body footer div {
+    background-color: #2c2b2b;
+    color: white;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+  }
+
+  body article h2 {
+    text-align: center;
+    color: black;
+    margin: 30px 30px 30px 30px;
+  }
+
+  body h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+
+  /* Grid por area Tablet */
+  #gridAreasIndex {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "cabeza " "menu " "nosotros" "repre" "atajos" "lugar " "pie ";
+    /* Dimensiones */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 0;
+  }
+}
+/* Smartphone */
+@media (max-width: 480px) {
+  body nav ul li {
+    grid-area: menu;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  body article p {
+    grid-area: nosotros;
+    text-align: center;
+    background-color: dodgerblue;
+    font-family: "Ubuntu-regular", sans-serif;
+    font-size: 22px;
+    height: 40vh;
+  }
+
+  body footer div {
+    background-color: #2c2b2b;
+    color: white;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+  }
+
+  body article h2 {
+    text-align: center;
+    color: black;
+    margin: 30px 30px 30px 30px;
+  }
+
+  body h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+  }
+
+  body section p {
+    padding: 60px;
+  }
+
+  /* Grids por area mobile */
+  #gridAreasIndex {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas: "cabeza " "menu " "nosotros" "repre" "lugar " "pie ";
+    /* Dimensiones */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 0;
+  }
 }
 
 /*# sourceMappingURL=destino.css.map */

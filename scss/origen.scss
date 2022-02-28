@@ -1,52 +1,228 @@
-/* Estilos */
+//IMPORT 
 
-body{ background-color: blanchedalmond;
-    div{
-    background-color: burlywood;
-    }
+@import "clases";
+@import "Animaciones";
+
+// Variables
+
+$color: dodgerblue;
+
+
+/* Estilos generales */
+
+@font-face {
+    font-family:"Ubuntu-regular" , sans-serif; 
+    src: url("Ubuntu/Ubuntu-Regular.ttf");
+}
+
+* {
+    margin: 0%;
+}
+
+/* Anidamiento */
+
+body nav ul li {
+    grid-area: menu;
+    margin: 10px; 
+    padding: 10px;
+    justify-content: center;
+}
+
+body section h2{
+    text-align: center;
+    color: black;
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+body h1{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+
+body section img{
+    grid-area: repre;
+    width: 150px;
+    height: 150px;
+}
+
+
+body footer div{
+    background-color: rgb(44, 43, 43);
+    color: white;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+body section p{
+    padding: 60px;
 }
 
 /* Mapas */
 
 $redes: (
-    instagram: violet,
     twitter: lightblue,
+    instagram: violet,
     facebook: blue
 );
 
 @each $nombres, $color in $redes {
+    // repite
     .boton-#{$nombres} {
         background-color: $color;
         border: $color;
-        width: 100px;
-        height: 100px;
     }
     
 }
 
-/* Extend */
+/* GRIDS */
 
-.boton {
-    width: 100px;
-    height: 100px;
+#gridAreasIndex {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas:
+    /* 1 columnas y 5 filas */
+    "menu "
+    "nosotros "
+    "repre"
+    "productos"
+    "atajos"
+    "lugar "/* fila 3 */
+    "pie "/* fila 4 */
+    ;
+    /* Dimensiones */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 0;
+    }
+
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 1023px){
+
+body{
+    height: 100vh;
+}
+
+body nav ul li {
+    grid-area: menu;
+    padding: 10px;
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body footer div{
+    background-color: rgb(44, 43, 43);
+    color: white;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+body article h2{
     text-align: center;
-    border: 2px solid black;
+    color: black;
+    margin: 30px 30px 30px 30px;
 }
 
-.boton-nuevo{
-    @extend .boton;
-    width: 300px;
-    height: 300px;
+body h1{
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
 }
 
-/* Mixin */
+/* Grid por area Tablet */
+#gridAreasIndex {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas:
+    /* 1 columnas y 6 filas */
+    "cabeza "
+    "menu "
+    "nosotros"
+    "repre"
+    "atajos"
+    "lugar "
+    "pie "
+    ;
+    /* Dimensiones */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 0;
+    }
 
-@mixin tamano($anchura, $altura) {
-    width: $anchura;
-    height: $altura;
-    
+
+
 }
 
-.caja1{
-    @include tamano(400px, 200px )
+/* Smartphone */
+
+@media (max-width: 480px){
+    body nav ul li {
+        grid-area: menu;
+        padding: 10px;
+        margin: 10px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    body article p{
+        grid-area: nosotros;
+        text-align: center;
+        background-color: dodgerblue;
+        font-family: "Ubuntu-regular" , sans-serif;
+        font-size: 22px;
+        height: 40vh;
+        
+    }
+
+    body footer div{
+        background-color: rgb(44, 43, 43);
+        color: white;
+        padding: 30px;
+        position: relative;
+        width: 100%;
+    }
+
+    body article h2{
+        text-align: center;
+        color: black;
+        margin: 30px 30px 30px 30px;
+    }
+
+    body h1{
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 40px;
+    }
+
+    body section p{
+        padding: 60px;
+    }
+
+/* Grids por area mobile */
+#gridAreasIndex {
+    display: grid;
+    /* grid por areas */
+    grid-template-areas:
+    /* 1 columnas y 6 filas */
+    "cabeza "
+    "menu "
+    "nosotros"
+    "repre"
+    "lugar "
+    "pie "
+    ;
+    /* Dimensiones */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 0;
+    }
 }

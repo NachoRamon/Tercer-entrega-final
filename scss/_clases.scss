@@ -1,0 +1,77 @@
+/* Clases */
+
+.border{
+    border: 1px solid black;
+}
+
+.Repre{
+    width: 100px;
+    height: 100px;
+    margin-left: 230px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.BoxMod{
+    margin-top: 50px;
+}
+
+.imag{
+    background-color: #d3d3d3;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    border-top: solid 40px white;
+}
+
+.centrar{
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.fondo{
+    background-color: #d3d3d3;
+}
+
+.titulos {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.color{
+    background-color: dodgerblue;
+    color: white
+}
+
+.color2{
+    background-color: #d3d3d3
+}
+
+.letra{
+    font-size: 25px;
+}
+
+/* Extend */
+
+.titulos-secu {
+    @extend .titulos;
+    margin-top: 30px;
+}
+
+/* Mixes */
+
+@mixin tamanio ($anchura, $altura) {
+    width: $anchura;
+    height: $altura;
+    
+}
+
+.caja-1{
+    @include tamanio(500px, 200px)
+}
+
+.caja-2{
+    @include tamanio(500px, 200px)
+}
