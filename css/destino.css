@@ -51,6 +51,22 @@
   font-size: 25px;
 }
 
+.mail {
+  background-color: dodgerblue;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+}
+
+.pie {
+  width: 100%;
+  position: sticky;
+}
+
+.principal {
+  height: 554px;
+}
+
 /* Extend */
 .titulos-secu {
   margin-top: 30px;
@@ -126,7 +142,6 @@ body footer div {
   background-color: #2c2b2b;
   color: white;
   padding: 30px;
-  position: relative;
   width: 100%;
 }
 
