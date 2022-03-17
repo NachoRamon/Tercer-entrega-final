@@ -67,6 +67,11 @@
   height: 554px;
 }
 
+.nicks {
+  font-family: sans-serif;
+  border: 1px solid dodgerblue;
+}
+
 /* Extend */
 .titulos-secu {
   margin-top: 30px;
@@ -149,20 +154,9 @@ body section p {
   padding: 60px;
 }
 
-/* Mapas */
-.boton-twitter {
-  background-color: lightblue;
-  border: lightblue;
-}
-
-.boton-instagram {
-  background-color: violet;
-  border: violet;
-}
-
-.boton-facebook {
-  background-color: blue;
-  border: blue;
+body main form {
+  padding-left: 300px;
+  padding-top: 20px;
 }
 
 /* GRIDS */

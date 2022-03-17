@@ -62,22 +62,12 @@ body section p{
     padding: 60px;
 }
 
-/* Mapas */
-
-$redes: (
-    twitter: lightblue,
-    instagram: violet,
-    facebook: blue
-);
-
-@each $nombres, $color in $redes {
-    // repite
-    .boton-#{$nombres} {
-        background-color: $color;
-        border: $color;
-    }
+body main form{
+    padding-left: 300px;
+    padding-top: 20px;
     
 }
+
 
 /* GRIDS */
 
